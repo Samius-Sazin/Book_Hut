@@ -5,13 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Hut</title>
 
-    <!-- style CSS-->
-
     <!-- Bootstrap Style -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+     <!-- style CSS-->
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+    <header>
+        <div class=" text-center mt-3 mb-3">
+            <h2 class="fs-1 text-success m-0">Book Hut</h3>
+            <h3 class="fs-6 m-0">Search your favourite book here</h3>
+        </div>
+    </header>
     
+    <main>
+        <!-- Search area -->
+        <div class="input-group mb-3 w-50 mx-auto">
+            <input  id="search-box" type="text" class="form-control" placeholder="Enter your favourite book name" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button id="search-button" class="btn btn-success fw-semibold" type="button">Search</button>
+        </div>
 
+        <!-- spinner -->
+        <div class="d-flex justify-content-center mb-3">
+            <div id="spinner" class="spinner-border text-success" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center mb-3">
+            <p id="show-result-warning" class="shadow"></p>
+        </div>
+
+        <!-- card, for show book details -->
+        <div id="search-result" class="row row-cols-1 row-cols-md-4 g-4 ms-5 me-5 mx-auto rounded"></div>
+
+
+    </main>
+    
+    
     <script src="logic.js"></script>
 </body>
 </html>

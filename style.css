@@ -1,0 +1,17 @@
+#spinner{
+    display: none;
+}
+#show-result-warning{
+    /* border: 3px solid #157347; */
+    width: auto;
+    border-radius: 5px;
+    padding: 4px 20px;
+    font-weight: bolder;
+    font-size: large;
+    color: rgb(254, 250, 234);
+    background-color: #157347;
+    display: none;
+}
+.shadow{
+    box-shadow: 0px 5px 10px rgba(31, 31, 32, 0.5);
+}
