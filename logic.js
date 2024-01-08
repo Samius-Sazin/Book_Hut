@@ -32,13 +32,25 @@ document.getElementById('search-button').addEventListener('click', () => {
         //clear the search area
         search_box.value = '';
 
+        // fecth, get adp data
+        getData(search_box_value);
+    }
+})
+
+// function for fecth, get adi data
+const getData = (search_box_value) => {
+    try{
         //load details / get item with API (fetch data)
         const url_1 = `https://openlibrary.org/search.json?q=${search_box_value}`;
         fetch(url_1)
         .then(res => res.json())
         .then(data => showDetails(data.docs));
     }
-})
+    catch(e){
+        show_result_warning.innerText = 'Unreachable request';
+        spinner_showResultWarning_Control('block', 'show-result-warning')
+    }
+}
 
 //Show details
 const showDetails = books => {
